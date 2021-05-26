@@ -1,6 +1,5 @@
 import React from 'react';
 import './Navbar.css';
-import '../../node_modules/font-awesome/css/font-awesome.min.css'; 
 
 function Navbar(prop){
     return(<><nav>

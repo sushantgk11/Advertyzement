@@ -8,6 +8,7 @@
   height: 100vh;
   display: grid;
   place-items: center;
+  background-color: rgb(189, 189, 189);
 }
 .main {
   width: 100%;
@@ -23,7 +24,7 @@
   min-height: 100vh;
   display: flex;
   box-sizing: border-box;
-  padding: 50px;
+  padding: 50px 0;
   flex-wrap: wrap;
   justify-content: center;
 }

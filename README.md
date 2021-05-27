@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Advertyzement 
+### Project Description:
+In this repository we will look at the API call to get the user data and display on profile card and show a loader while the API fetches the data.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Demo:** <https://sushantgk11.github.io/Advertyzement/>
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Steps followed:  
+1.	Created new React app using **`npx create-react-app <app-name>`**
+2.	Created **‘Navbar’** and **‘Card’**  components for reuse and used Glassmorphism style for Card.
+3.	Created **'Userprofile'** component.
+4.	In Userprofile component,  created **userData** and **isLoading** states  using **"useState"**  hooks.
+5.	In userprofile component defined  **gerUserData()** function to return “fetch()” function to make http requests to an API & It returns a promise!
+6.	Tthis fetch request, We're making a request to **‘https://reqres.in/api/users?page=1'** and adding **.then()** to take the server's successful response and returning that response converted into JSON.
+7.	Before fetching an API set the loader to **‘true’** state for display loading screen.
+8.	what have our data converted into JSON we want to display that data. To do this we can chain another **.then()** method onto our first one, to set our data into **userData**  variable using useState hook.
+9.	After the setting the userData state then set the loader to **‘false’** state.
+10. Installed react–loading  using **`npm i react-loading`**
+11. Imported react-loading in **'Userprofile'** component then returned loader in JSX when loader state is **'true'**
+12.	Imported Navbar component which having **'Get Users'** button and retuned it in JSX.
+13.	Passed  **getUserData()** function as props value into Navbar.
+14.	Imported Card component then passed **userData**  as props value to the Card.
+15.	Then this Userprofile component rendered in **index.js** .
+16.	Now we can run this app using **`npm start`**
